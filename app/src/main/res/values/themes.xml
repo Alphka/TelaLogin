@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+	<style name="Base.Theme.TelaLogin" parent="Theme.Material3.DayNight.NoActionBar">
+		<item name="colorPrimary">@color/blue_600</item>
+		<item name="colorPrimaryVariant">@color/gray_900</item>
+		<item name="colorOnPrimary">?colorSecondary</item>
+		<item name="colorSecondary">@color/gray_200</item>
+		<item name="colorSecondaryVariant">@color/gray_400</item>
+		<item name="colorOnSecondary">?colorPrimaryVariant</item>
+		<item name="android:statusBarColor">?colorPrimaryVariant</item>
+
+		<item name="colorPrimaryBackground">@color/gray_800</item>
+		<item name="colorPrimaryBackgroundEnd">@color/gray_900</item>
+		<item name="colorPrimaryInputBackground">@color/slate_600</item>
+	</style>
+
+	<style name="Theme.TelaLogin" parent="Base.Theme.TelaLogin" />
+</resources>

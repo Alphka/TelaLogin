@@ -1,0 +1,8 @@
+<resources>
+	<string name="app_name">TelaLogin</string>
+	<string name="logoAltText">Logotipo do aplicativo</string>
+	<string name="fieldEmail">Email</string>
+	<string name="fieldPassword">Senha</string>
+	<string name="buttonLogin">Entrar</string>
+	<string name="register">Crie uma conta clicando aqui!</string>
+</resources>
