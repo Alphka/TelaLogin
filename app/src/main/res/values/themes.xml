@@ -1,5 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-	<style name="Base.Theme.TelaLogin" parent="Theme.Material3.DayNight.NoActionBar">
+	<style name="Base.Theme.TelaLogin" parent="Theme.Material3.Dark.NoActionBar">
 		<item name="colorPrimary">@color/blue_600</item>
 		<item name="colorPrimaryVariant">@color/gray_900</item>
 		<item name="colorOnPrimary">?colorSecondary</item>
@@ -7,6 +7,10 @@
 		<item name="colorSecondaryVariant">@color/gray_400</item>
 		<item name="colorOnSecondary">?colorPrimaryVariant</item>
 		<item name="android:statusBarColor">?colorPrimaryVariant</item>
+		<item name="android:textColorPrimary">?colorOnPrimary</item>
+		<item name="android:textColorSecondary">?colorOnPrimary</item>
+		<item name="android:textColorTertiary">?colorOnPrimary</item>
+		<item name="android:background">?colorPrimaryVariant</item>
 
 		<item name="colorPrimaryBackground">@color/gray_800</item>
 		<item name="colorPrimaryBackgroundEnd">@color/gray_900</item>
