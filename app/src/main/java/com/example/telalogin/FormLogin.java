@@ -43,7 +43,7 @@ public class FormLogin extends AppCompatActivity {
 		setContentView(R.layout.activity_form_login);
 
 		Resources resources = getResources();
-		Resources.Theme theme = this.getTheme();
+		Resources.Theme theme = getTheme();
 		TypedValue typedValue = new TypedValue();
 
 		TextView registerLink = findViewById(R.id.register);
@@ -73,7 +73,7 @@ public class FormLogin extends AppCompatActivity {
 			return false;
 		});
 
-		Snackbar snackbar = Snackbar.make(this.getWindow().getDecorView().getRootView(), "", Snackbar.LENGTH_SHORT);
+		Snackbar snackbar = Snackbar.make(getWindow().getDecorView().getRootView(), "", Snackbar.LENGTH_SHORT);
 		snackbar.setBackgroundTint(colorPrimary);
 		snackbar.setTextColor(colorOnPrimary);
 
@@ -88,7 +88,7 @@ public class FormLogin extends AppCompatActivity {
 				return;
 			}
 
-			this.SetLoading(true);
+			SetLoading(true);
 
 			FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password).addOnCompleteListener(result -> {
 				int messageId;
@@ -96,7 +96,7 @@ public class FormLogin extends AppCompatActivity {
 				try{
 					if(result.isSuccessful()){
 						startActivity(new Intent(this, MainActivity.class));
-						this.SetLoading(false);
+						SetLoading(false);
 						return;
 					}
 
@@ -112,7 +112,7 @@ public class FormLogin extends AppCompatActivity {
 				snackbar.setText(message);
 				snackbar.show();
 
-				this.SetLoading(false);
+				SetLoading(false);
 			});
 		});
 

@@ -8,7 +8,6 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.util.Log;
 import android.util.TypedValue;
-import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
@@ -38,7 +37,7 @@ public class FormCadastro extends AppCompatActivity {
 		setContentView(R.layout.activity_form_cadastro);
 
 		Resources resources = getResources();
-		Resources.Theme theme = this.getTheme();
+		Resources.Theme theme = getTheme();
 		TypedValue typedValue = new TypedValue();
 
 		EditText nameInput = findViewById(R.id.name);
@@ -68,7 +67,7 @@ public class FormCadastro extends AppCompatActivity {
 			return false;
 		});
 
-		Snackbar snackbar = Snackbar.make(this.getWindow().getDecorView().getRootView(), "", Snackbar.LENGTH_SHORT);
+		Snackbar snackbar = Snackbar.make(getWindow().getDecorView().getRootView(), "", Snackbar.LENGTH_SHORT);
 		snackbar.setBackgroundTint(colorPrimary);
 		snackbar.setTextColor(colorOnPrimary);
 
@@ -84,7 +83,7 @@ public class FormCadastro extends AppCompatActivity {
 				return;
 			}
 
-			this.SetLoading(true);
+			SetLoading(true);
 
 			FirebaseAuth firebase = FirebaseAuth.getInstance();
 
@@ -111,7 +110,7 @@ public class FormCadastro extends AppCompatActivity {
 						});
 
 						startActivity(new Intent(this, MainActivity.class));
-						this.SetLoading(false);
+						SetLoading(false);
 						return;
 					}
 
@@ -133,7 +132,7 @@ public class FormCadastro extends AppCompatActivity {
 				snackbar.setText(message);
 				snackbar.show();
 
-				this.SetLoading(false);
+				SetLoading(false);
 			});
 		});
 	}
