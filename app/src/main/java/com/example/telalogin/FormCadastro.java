@@ -73,9 +73,9 @@ public class FormCadastro extends AppCompatActivity {
 		snackbar.setTextColor(colorOnPrimary);
 
 		submitButton.setOnClickListener(view -> {
-			String name = nameInput.getText().toString();
-			String email = emailInput.getText().toString();
-			String password = passwordInput.getText().toString();
+			String name = nameInput.getText().toString().trim();
+			String email = emailInput.getText().toString().trim();
+			String password = passwordInput.getText().toString().trim();
 
 			if(name.isEmpty() || email.isEmpty() || password.isEmpty()){
 				snackbar.setBackgroundTint(colorErrorPrimary);
@@ -88,7 +88,7 @@ public class FormCadastro extends AppCompatActivity {
 
 			FirebaseAuth firebase = FirebaseAuth.getInstance();
 
-			firebase.createUserWithEmailAndPassword(email.trim(), password.trim()).addOnCompleteListener(result -> {
+			firebase.createUserWithEmailAndPassword(email, password).addOnCompleteListener(result -> {
 				int messageId;
 
 				try{
@@ -98,7 +98,7 @@ public class FormCadastro extends AppCompatActivity {
 
 						userData.put("name", name);
 
-						String userId = firebase.getCurrentUser().getUid();
+						String userId = Objects.requireNonNull(firebase.getCurrentUser()).getUid();
 						DocumentReference documentReference = database.collection("Users").document(userId);
 
 						documentReference.set(userData).addOnCompleteListener(firestoreResult -> {
