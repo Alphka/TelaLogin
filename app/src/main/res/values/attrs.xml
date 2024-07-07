@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<attr name="colorPrimaryBackground" format="reference|color" />
-	<attr name="colorPrimaryInputBackground" format="reference|color" />
-	<attr name="colorPrimaryBackgroundEnd" format="reference|color" />
+	<attr name="colorPrimary" format="color" />
+	<attr name="colorOnPrimary" format="color" />
+
+	<attr name="colorErrorPrimary" format="color" />
+	<attr name="colorErrorSecondary" format="color" />
+	<attr name="colorPrimaryVariant" format="color" />
+	<attr name="colorPrimaryBackground" format="color" />
+	<attr name="colorPrimaryInputBackground" format="color" />
+	<attr name="colorPrimaryBackgroundEnd" format="color" />
 </resources>

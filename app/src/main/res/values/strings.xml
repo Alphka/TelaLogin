@@ -1,11 +1,23 @@
 <resources>
 	<string name="app_name">TelaLogin</string>
+
 	<string name="logoAltText">Logotipo do aplicativo</string>
+	<string name="userImageAltText">Imagem do usuário</string>
+
 	<string name="fieldName">Nome</string>
 	<string name="fieldEmail">Email</string>
 	<string name="fieldPassword">Senha</string>
+	<string name="fillAllFields">Preencha todos os campos</string>
+	<string name="somethingWentWrong">Algo deu errado</string>
+	<string name="weakPassword">A senha deve ter no mínimo 6 caracteres</string>
+	<string name="invalidEmail">E-mail inválido</string>
+	<string name="accountAlreadyExists">Este e-mail já está sendo usado em outra conta</string>
+
+	<string name="loginTitle">Faça login ou cadastre-se</string>
 	<string name="buttonLogin">Entrar</string>
 	<string name="register">Crie uma conta clicando aqui!</string>
+
 	<string name="registerTitle">Cadastre-se</string>
-	<string name="userImageAltText">Imagem do usuário</string>
+	<string name="buttonRegister">Enviar</string>
+	<string name="registeredSuccessfully">Usuário registrado com sucesso!</string>
 </resources>

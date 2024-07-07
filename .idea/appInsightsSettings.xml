@@ -8,10 +8,10 @@
 						<InsightsFilterSettings>
 							<option name="connection">
 								<ConnectionSetting>
-									<option name="appId" value="PLACEHOLDER" />
-									<option name="mobileSdkAppId" value="" />
-									<option name="projectId" value="" />
-									<option name="projectNumber" value="" />
+									<option name="appId" value="com.example.telalogin" />
+									<option name="mobileSdkAppId" value="1:440083061019:android:612d756ce0a7c835921bbe" />
+									<option name="projectId" value="telaloginalphka" />
+									<option name="projectNumber" value="440083061019" />
 								</ConnectionSetting>
 							</option>
 							<option name="signal" value="SIGNAL_UNSPECIFIED" />
