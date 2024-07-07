@@ -14,11 +14,8 @@
 		tools:context=".FormCadastro"
 	>
 		<TextView
+			style="@style/LoginTitle"
 			android:id="@+id/title"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:layout_marginTop="80dp"
-			android:textSize="45sp"
 			android:text="@string/registerTitle"
 			app:layout_constraintStart_toStartOf="parent"
 			app:layout_constraintEnd_toEndOf="parent"
@@ -38,7 +35,8 @@
 				android:hint="@string/fieldName"
 				android:inputType="textPersonName"
 				android:autofillHints="name"
-				android:drawableStart="@drawable/icon_person"
+				android:drawableStart="@drawable/ic_person"
+				android:imeOptions="actionNext"
 			/>
 
 			<EditText
@@ -47,7 +45,8 @@
 				android:hint="@string/fieldEmail"
 				android:inputType="textEmailAddress"
 				android:autofillHints="emailAddress"
-				android:drawableStart="@drawable/icon_email"
+				android:drawableStart="@drawable/ic_email"
+				android:imeOptions="actionNext"
 			/>
 
 			<EditText
@@ -56,23 +55,24 @@
 				android:hint="@string/fieldPassword"
 				android:inputType="textPassword"
 				android:autofillHints="password"
-				android:drawableStart="@drawable/icon_eye"
+				android:drawableStart="@drawable/ic_key"
+				android:imeOptions="actionDone"
 			/>
 
-			<LinearLayout style="@style/LoginSubmitButtonContainer">
+			<LinearLayout style="@style/LoginSubmitButtonContainer" android:gravity="center">
 				<androidx.appcompat.widget.AppCompatButton
 					style="@style/LoginSubmitButton"
+					android:id="@+id/submitButton"
 					android:text="@string/buttonLogin"
 				/>
 			</LinearLayout>
-		</LinearLayout>
 
-		<ProgressBar
-			style="@style/FormProgressBar"
-			android:id="@+id/progressBar"
-			app:layout_constraintStart_toStartOf="parent"
-			app:layout_constraintEnd_toEndOf="parent"
-			app:layout_constraintTop_toBottomOf="@id/form"
-		/>
+			<ProgressBar
+				android:id="@+id/progressBar"
+				style="@style/FormProgressBar"
+				android:layout_height="28sp"
+				android:layout_marginTop="-34sp"
+			/>
+		</LinearLayout>
 	</androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

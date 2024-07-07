@@ -29,16 +29,16 @@ local.properties
 
 # IntelliJ
 *.iml
-/.idea/workspace.xml
-/.idea/modules.xml
-/.idea/tasks.xml
-/.idea/misc.xml
-/.idea/migrations.xml
-/.idea/compiler.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-/.idea/dictionaries/
-/.idea/libraries/
-/.idea/caches/
-/.idea/shelf/
+.idea/workspace.xml
+.idea/modules.xml
+.idea/tasks.xml
+.idea/misc.xml
+.idea/migrations.xml
+.idea/compiler.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+.idea/dictionaries/
+.idea/libraries/
+.idea/caches/
+.idea/shelf/
 .cxx
