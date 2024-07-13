@@ -20,4 +20,6 @@
 	<string name="registerTitle">Cadastre-se</string>
 	<string name="buttonRegister">Enviar</string>
 	<string name="registeredSuccessfully">Usuário registrado com sucesso!</string>
+
+	<string name="logout">Deslogar</string>
 </resources>
