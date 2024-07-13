@@ -31,16 +31,6 @@
 		>
 			<EditText
 				style="@style/LoginTextInput"
-				android:id="@+id/name"
-				android:hint="@string/fieldName"
-				android:inputType="textPersonName"
-				android:autofillHints="name"
-				android:drawableStart="@drawable/ic_person"
-				android:imeOptions="actionNext"
-			/>
-
-			<EditText
-				style="@style/LoginTextInput"
 				android:id="@+id/email"
 				android:hint="@string/fieldEmail"
 				android:inputType="textEmailAddress"
@@ -63,7 +53,7 @@
 				<androidx.appcompat.widget.AppCompatButton
 					style="@style/LoginSubmitButton"
 					android:id="@+id/submitButton"
-					android:text="@string/buttonLogin"
+					android:text="@string/buttonRegister"
 				/>
 			</LinearLayout>
 

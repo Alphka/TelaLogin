@@ -1,51 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView
+<androidx.constraintlayout.widget.ConstraintLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:tools="http://schemas.android.com/tools"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
-	android:fillViewport="true"
+	android:background="@drawable/background"
+	tools:context=".MainActivity"
 >
-	<androidx.constraintlayout.widget.ConstraintLayout
-		android:layout_width="match_parent"
-		android:layout_height="match_parent"
-		android:background="@drawable/background"
-		tools:context=".MainActivity"
-	>
-		<de.hdodenhof.circleimageview.CircleImageView
-			android:id="@+id/userImage"
-			android:layout_width="100dp"
-			android:layout_height="100dp"
-			android:layout_marginTop="80dp"
-			android:src="@android:drawable/screen_background_dark"
-			android:contentDescription="@string/userImageAltText"
-			app:layout_constraintTop_toTopOf="parent"
-			app:layout_constraintStart_toStartOf="parent"
-			app:layout_constraintEnd_toEndOf="parent"
-		/>
-
-		<androidx.appcompat.widget.AppCompatButton
-			android:id="@+id/logoutButton"
-			android:background="@drawable/logout_button"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:minHeight="0dp"
-			android:minWidth="0dp"
-			android:text="@string/logout"
-			android:textSize="28sp"
-			android:lineHeight="32sp"
-			android:textColor="?colorOnPrimary"
-			android:textAllCaps="false"
-			android:textAlignment="center"
-			android:paddingTop="6dp"
-			android:paddingBottom="6dp"
-			android:paddingLeft="16dp"
-			android:paddingRight="16dp"
-			android:layout_marginTop="40dp"
-			app:layout_constraintStart_toStartOf="parent"
-			app:layout_constraintEnd_toEndOf="parent"
-			app:layout_constraintTop_toBottomOf="@id/userImage"
-		/>
-	</androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.core.widget.NestedScrollView>
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Hello World!"
+		android:textSize="22sp"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+	/>
+</androidx.constraintlayout.widget.ConstraintLayout>
