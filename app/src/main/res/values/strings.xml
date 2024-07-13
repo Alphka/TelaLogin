@@ -4,7 +4,6 @@
 	<string name="logoAltText">Logotipo do aplicativo</string>
 	<string name="userImageAltText">Imagem do usuário</string>
 
-	<string name="fieldName">Nome</string>
 	<string name="fieldEmail">Email</string>
 	<string name="fieldPassword">Senha</string>
 	<string name="fillAllFields">Preencha todos os campos</string>
@@ -16,6 +15,8 @@
 	<string name="loginTitle">Faça login ou cadastre-se</string>
 	<string name="buttonLogin">Entrar</string>
 	<string name="register">Crie uma conta clicando aqui!</string>
+	<string name="incorrectPassword">Senha incorreta</string>
+	<string name="accountNotFound">Credenciais não encontradas</string>
 
 	<string name="registerTitle">Cadastre-se</string>
 	<string name="buttonRegister">Enviar</string>
