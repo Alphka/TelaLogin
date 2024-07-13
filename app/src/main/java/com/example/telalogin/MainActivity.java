@@ -4,8 +4,12 @@ import androidx.activity.OnBackPressedCallback;
 import androidx.activity.OnBackPressedDispatcher;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.widget.Button;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 	@Override
@@ -30,5 +34,13 @@ public class MainActivity extends AppCompatActivity {
 				}
 			});
 		}
+
+		Button logoutButton = findViewById(R.id.logoutButton);
+
+		logoutButton.setOnClickListener(view -> {
+			FirebaseAuth firebase = FirebaseAuth.getInstance();
+			firebase.signOut();
+			startActivity(new Intent(this, FormLogin.class));
+		});
 	}
 }
