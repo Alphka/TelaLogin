@@ -9,15 +9,13 @@ import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
-	public static final String databaseName = "Signup.db";
-
 	public DatabaseHelper(@Nullable Context context){
-		super(context, "Signup.db", null, 1);
+		super(context, "UserData.db", null, 1);
 	}
 
 	@Override
 	public void onCreate(SQLiteDatabase sqLiteDatabase){
-		sqLiteDatabase.execSQL("create table user (email TEXT primary key, password TEXT)");
+		sqLiteDatabase.execSQL("create table user (name text primary key, contact text, dob text)");
 	}
 
 	@Override
@@ -25,33 +23,53 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		sqLiteDatabase.execSQL("drop table if exists user");
 	}
 
-	public boolean insertData(String email, String password){
+	public boolean insertUser(String name, String contact, String dob){
 		SQLiteDatabase sqLiteDatabase = getWritableDatabase();
 
 		ContentValues contentValues = new ContentValues();
-		contentValues.put("email", email);
-		contentValues.put("password", password);
+		contentValues.put("name", name);
+		contentValues.put("contact", contact);
+		contentValues.put("dob", dob);
 
 		long result = sqLiteDatabase.insert("user", null, contentValues);
 
 		return result != -1;
 	}
 
-	public boolean checkEmailExists(String email){
+	public boolean updateUser(String name, String contact, String dob){
 		SQLiteDatabase sqLiteDatabase = getWritableDatabase();
 
-		String[] args = { email };
-		Cursor cursor = sqLiteDatabase.rawQuery("select * from user where email = ?", args);
+		ContentValues contentValues = new ContentValues();
+		contentValues.put("contact", contact);
+		contentValues.put("dob", dob);
+		Cursor cursor = sqLiteDatabase.rawQuery("select * from user where name = ?", new String[]{ name });
 
-		return cursor.getCount() > 0;
+		if(cursor.getCount() == 0){
+			cursor.close();
+			return false;
+		}
+
+		int result = sqLiteDatabase.update("user", contentValues, "name=?", new String[]{ name });
+
+		return result != -1;
 	}
 
-	public boolean checkCredentials(String email, String password){
+	public boolean deleteUser(String name){
 		SQLiteDatabase sqLiteDatabase = getWritableDatabase();
+		Cursor cursor = sqLiteDatabase.rawQuery("select * from user where name = ?", new String[]{ name });
 
-		String[] args = { email, password };
-		Cursor cursor = sqLiteDatabase.rawQuery("select * from user where email = ? and password = ?", args);
+		if(cursor.getCount() == 0){
+			cursor.close();
+			return false;
+		}
 
-		return cursor.getCount() > 0;
+		int result = sqLiteDatabase.delete("user", "name=?", new String[]{ name });
+
+		return result != -1;
+	}
+
+	public Cursor getData(){
+		SQLiteDatabase sqLiteDatabase = getWritableDatabase();
+		return sqLiteDatabase.rawQuery("select * from user", null);
 	}
 }
