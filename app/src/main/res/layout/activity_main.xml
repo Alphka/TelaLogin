@@ -1,124 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<androidx.core.widget.NestedScrollView
 	xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:app="http://schemas.android.com/apk/res-auto"
 	xmlns:tools="http://schemas.android.com/tools"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
-	android:background="@drawable/background"
-	tools:context=".MainActivity"
+	android:fillViewport="true"
 >
-	<TextView
-		android:id="@+id/title"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:text="@string/title"
-		android:textSize="36sp"
-		android:layout_marginTop="40dp"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintTop_toTopOf="parent"
-	/>
-
-	<EditText
-		android:id="@+id/name"
+	<androidx.constraintlayout.widget.ConstraintLayout
 		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:hint="@string/nameInput"
-		android:textSize="22sp"
-		android:layout_marginLeft="40dp"
-		android:layout_marginRight="40dp"
-		android:layout_marginTop="40dp"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintTop_toBottomOf="@id/title"
-	/>
-
-	<EditText
-		android:id="@+id/contact"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:hint="@string/contactInput"
-		android:textSize="22sp"
-		android:layout_marginLeft="40dp"
-		android:layout_marginRight="40dp"
-		android:layout_marginTop="20dp"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintTop_toBottomOf="@id/name"
-	/>
-
-	<EditText
-		android:id="@+id/dob"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:hint="@string/dobInput"
-		android:textSize="22sp"
-		android:layout_marginLeft="40dp"
-		android:layout_marginRight="40dp"
-		android:layout_marginTop="20dp"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintTop_toBottomOf="@id/contact"
-	/>
-
-	<LinearLayout
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:orientation="vertical"
-		android:gravity="center_horizontal"
-		android:layout_marginTop="40dp"
-		android:layout_marginLeft="60dp"
-		android:layout_marginRight="60dp"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintTop_toBottomOf="@id/dob"
+		android:layout_height="match_parent"
+		android:background="@drawable/background"
+		tools:context=".MainActivity"
 	>
-		<Button
-			android:id="@+id/insertButton"
-			android:layout_width="match_parent"
+		<TextView
+			android:id="@+id/title"
+			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:backgroundTint="@color/blue_600"
-			android:text="@string/insertButton"
-			android:textSize="22sp"
-			android:paddingTop="10dp"
-			android:paddingBottom="10dp"
+			android:text="@string/title"
+			android:textSize="36sp"
+			android:layout_marginTop="40dp"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
 		/>
 
-		<Button
-			android:id="@+id/updateButton"
+		<EditText
+			android:id="@+id/name"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:backgroundTint="@color/yellow_600"
-			android:text="@string/updateButton"
+			android:inputType="textPersonName"
+			android:autofillHints="name"
+			android:hint="@string/nameInput"
 			android:textSize="22sp"
-			android:paddingTop="10dp"
-			android:paddingBottom="10dp"
-			android:layout_marginTop="20dp"
+			android:layout_marginLeft="40dp"
+			android:layout_marginRight="40dp"
+			android:layout_marginTop="40dp"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/title"
 		/>
 
-		<Button
-			android:id="@+id/deleteButton"
+		<EditText
+			android:id="@+id/contact"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:backgroundTint="@color/red_600"
-			android:text="@string/deleteButton"
+			android:inputType="phone"
+			android:autofillHints="phone"
+			android:hint="@string/contactInput"
 			android:textSize="22sp"
-			android:paddingTop="10dp"
-			android:paddingBottom="10dp"
+			android:layout_marginLeft="40dp"
+			android:layout_marginRight="40dp"
 			android:layout_marginTop="20dp"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/name"
 		/>
 
-		<Button
-			android:id="@+id/getAllButton"
+		<EditText
+			android:id="@+id/dob"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:backgroundTint="@color/gray_600"
-			android:text="@string/getAllButton"
+			android:inputType="date"
+			android:autofillHints="bday"
+			android:hint="@string/dobInput"
 			android:textSize="22sp"
-			android:paddingTop="10dp"
-			android:paddingBottom="10dp"
+			android:layout_marginLeft="40dp"
+			android:layout_marginRight="40dp"
 			android:layout_marginTop="20dp"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/contact"
 		/>
-	</LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:gravity="center_horizontal"
+			android:layout_marginTop="40dp"
+			android:layout_marginBottom="40dp"
+			android:layout_marginLeft="60dp"
+			android:layout_marginRight="60dp"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/dob"
+		>
+			<Button
+				android:id="@+id/insertButton"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:backgroundTint="@color/blue_600"
+				android:text="@string/insertButton"
+				android:textSize="22sp"
+				android:paddingTop="10dp"
+				android:paddingBottom="10dp"
+			/>
+
+			<Button
+				android:id="@+id/updateButton"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:backgroundTint="@color/yellow_600"
+				android:text="@string/updateButton"
+				android:textSize="22sp"
+				android:paddingTop="10dp"
+				android:paddingBottom="10dp"
+				android:layout_marginTop="20dp"
+			/>
+
+			<Button
+				android:id="@+id/deleteButton"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:backgroundTint="@color/red_600"
+				android:text="@string/deleteButton"
+				android:textSize="22sp"
+				android:paddingTop="10dp"
+				android:paddingBottom="10dp"
+				android:layout_marginTop="20dp"
+			/>
+
+			<Button
+				android:id="@+id/getAllButton"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:backgroundTint="@color/gray_600"
+				android:text="@string/getAllButton"
+				android:textSize="22sp"
+				android:paddingTop="10dp"
+				android:paddingBottom="10dp"
+				android:layout_marginTop="20dp"
+			/>
+		</LinearLayout>
+	</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
