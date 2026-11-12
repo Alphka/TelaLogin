@@ -14,12 +14,14 @@ gen/
 out/
 
 # Gradle files
-/gradle/wrapper/gradle-wrapper.jar
 .gradle/
 build/
 
 # Local configuration file (sdk path, etc)
 local.properties
+
+# Firebase
+/app/google-services.json
 
 # Log Files
 *.log
@@ -29,16 +31,26 @@ local.properties
 
 # IntelliJ
 *.iml
-.idea/workspace.xml
-.idea/modules.xml
-.idea/tasks.xml
-.idea/misc.xml
-.idea/migrations.xml
-.idea/compiler.xml
-.idea/navEditor.xml
-.idea/assetWizardSettings.xml
-.idea/dictionaries/
-.idea/libraries/
-.idea/caches/
-.idea/shelf/
+*.iws
+/.idea/workspace.xml
+/.idea/modules.xml
+/.idea/tasks.xml
+/.idea/misc.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+/.idea/deploymentTargetSelector.xml
+/.idea/deviceManager.xml
+/.idea/studiobot.xml
+/.idea/appInsightsSettings.xml
+/.idea/androidTestResultsUserPreferences.xml
+/.idea/render.experimental.xml
+/.idea/dictionaries/
+/.idea/libraries/
+/.idea/caches/
+/.idea/shelf/
+/.idea/httpRequests/
+/.idea/dataSources/
+/.idea/dataSources.local.xml
+/.idea/**/usage.statistics.xml
+/.idea/**/copilot.data.migration.*.xml
 .cxx
