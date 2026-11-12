@@ -35,7 +35,7 @@ Android app (Java) with email/password login and registration screens, backed by
 - Your own Firebase project with **Email/Password** sign-in and **Cloud Firestore** enabled
 
 > [!NOTE]
-> This repository tracks an `app/google-services.json` that points to the author's Firebase project. To run the app against your own backend, replace it with the file downloaded from your Firebase console (the Android package name is `com.example.telalogin`).
+> The `app/google-services.json` file is not included in the repository. To run the app, add your own, downloaded from your Firebase console (the Android package name is `com.example.telalogin`).
 
 ## Installation and running
 
@@ -46,7 +46,7 @@ Android app (Java) with email/password login and registration screens, backed by
    ```
 
 2. Open the project in Android Studio and let Gradle sync.
-3. Replace `app/google-services.json` with the one from your own Firebase project.
+3. Add your own `app/google-services.json`, downloaded from your Firebase project.
 4. Run the `app` configuration on an emulator or a device.
 
 Command line (with the Android SDK configured):

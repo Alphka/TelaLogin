@@ -35,7 +35,7 @@ Aplicativo Android (Java) com telas de login e cadastro por e-mail e senha, usan
 - Um projeto Firebase próprio com login por **E-mail/Senha** e **Cloud Firestore** habilitados
 
 > [!NOTE]
-> Este repositório versiona um `app/google-services.json` que aponta para o projeto Firebase do autor. Para usar seu próprio backend, substitua-o pelo arquivo baixado do console do Firebase (o nome do pacote Android é `com.example.telalogin`).
+> O arquivo `app/google-services.json` não está incluído no repositório. Para executar o aplicativo, adicione o seu, baixado do console do Firebase (o nome do pacote Android é `com.example.telalogin`).
 
 ## Instalação e execução
 
@@ -46,7 +46,7 @@ Aplicativo Android (Java) com telas de login e cadastro por e-mail e senha, usan
    ```
 
 2. Abra o projeto no Android Studio e aguarde a sincronização do Gradle.
-3. Substitua `app/google-services.json` pelo do seu projeto Firebase.
+3. Adicione o seu `app/google-services.json`, baixado do seu projeto Firebase.
 4. Execute a configuração `app` em um emulador ou dispositivo.
 
 Pela linha de comando (com o Android SDK configurado):
